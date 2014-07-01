@@ -17,7 +17,7 @@ public class massCalculator {
 			planets[i]=new Planet(keyboard.next(), keyboard.nextLong(), keyboard.nextLong());
 		}
 		
-		
+		System.out.println(weightObject);
 	}
 
 }
