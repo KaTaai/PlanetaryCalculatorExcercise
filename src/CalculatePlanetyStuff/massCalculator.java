@@ -16,14 +16,16 @@ public class massCalculator {
 		int nameLength=0;
 		for(int i=0;i<planets.length;i++){
 			String name=keyboard.next();
-			planets[i]=new Planet(name, keyboard.nextLong(), keyboard.nextLong());
+			planets[i]=new Planet(name, keyboard.nextDouble(), keyboard.nextDouble());
 			nameLength=Math.max(nameLength,name.length());
 		}
 		
 		for (int i=0;i<planets.length;i++){
 			double mass=Functions.force(
-					weightObject,Functions.weightVD(Functions.volume(planets[i].getRadius()), planets[i].getAvgDensity()));
-			System.out.printf("%-"+nameLength+"s %f",planets[i].getName(),mass);
+					weightObject,
+					Functions.weightVD(Functions.volume(planets[i].getRadius()), planets[i].getAvgDensity()),
+					planets[i].getRadius());
+			System.out.printf("%-"+nameLength+"s %.3f",planets[i].getName(),mass);
 			System.out.println();
 		}
 	}
