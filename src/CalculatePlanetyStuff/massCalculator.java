@@ -13,11 +13,19 @@ public class massCalculator {
 		int totalPlanets=keyboard.nextInt();
 		Planet planets[]=new Planet[totalPlanets];
 		System.out.println("Give the name of the planet"+(planets.length>1?"s ":" ")+"followed by its radius followed by the average density of the planet separated by spaces");
+		int nameLength=0;
 		for(int i=0;i<planets.length;i++){
-			planets[i]=new Planet(keyboard.next(), keyboard.nextLong(), keyboard.nextLong());
+			String name=keyboard.next();
+			planets[i]=new Planet(name, keyboard.nextLong(), keyboard.nextLong());
+			nameLength=Math.max(nameLength,name.length());
 		}
 		
-		System.out.println(weightObject);
+		for (int i=0;i<planets.length;i++){
+			double mass=Functions.force(
+					weightObject,Functions.weightVD(Functions.volume(planets[i].getRadius()), planets[i].getAvgDensity()));
+			System.out.printf("%-"+nameLength+"s %f",planets[i].getName(),mass);
+			System.out.println();
+		}
 	}
 
 }
