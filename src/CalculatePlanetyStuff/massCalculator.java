@@ -9,7 +9,7 @@ public class massCalculator {
 		Scanner keyboard=new Scanner(System.in);
 		System.out.println("How many kg does the object weigh?");
 		int weightObject=keyboard.nextInt();
-		System.out.println("How many planets are there?");
+		System.out.println("How many planets are there?(>0)");
 		int totalPlanets=keyboard.nextInt();
 		Planet planets[]=new Planet[totalPlanets];
 		System.out.println("Give the name of the planet"+(planets.length>1?"s ":" ")+"followed by its radius followed by the average density of the planet separated by spaces");
