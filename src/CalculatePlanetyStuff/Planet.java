@@ -2,10 +2,10 @@ package CalculatePlanetyStuff;
 
 public class Planet {
 	private String name;
-	private long radius;
-	private long avgDensity;
+	private double radius;
+	private double avgDensity;
 	
-	Planet(String name, long radius, long avgDensity){
+	Planet(String name, double radius, double avgDensity){
 		this.name=name;
 		this.radius=radius;
 		this.avgDensity=avgDensity;
@@ -13,8 +13,8 @@ public class Planet {
 	
 	public String getName(){return name;}
 	
-	public long getRadius(){return radius;}
+	public double getRadius(){return radius;}
 	
-	public long getAvgDensity(){return avgDensity;}
+	public double getAvgDensity(){return avgDensity;}
 	
 }
