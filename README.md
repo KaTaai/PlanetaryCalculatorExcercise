@@ -1,7 +1,10 @@
 PlanetaryCalculatorExcercise
 ============================
 
-practicing with [6/14/2014] Challenge #166b [Easy] Planetary Gravity Calculator from http://www.reddit.com/r/dailyprogrammer/comments/284mep/6142014_challenge_166b_easy_planetary_gravity/  also trying out git
+practicing with [6/14/2014] Challenge #166b [Easy] Planetary Gravity Calculator
+Source: http://www.reddit.com/r/dailyprogrammer/comments/284mep/6142014_challenge_166b_easy_planetary_gravity/
+also trying out git
 
-Following the Create a repo tutorial
-
+TODO:	Add ability to work with comma delimiters.
+		File input
+		File output
